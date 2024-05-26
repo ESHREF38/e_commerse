@@ -46,9 +46,14 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 100),
-            
-              SizedBox(height: 100),
+              SizedBox(height: 150),
+              Text(
+                "Please enter your OTP code that we have sent you to your number , please chexk your number and enter here OTP to cerify",
+                style: TextStyle(
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(height: 50),
               TextFieldPin(
                   textController: textEditingController,
                   autoFocus: true,

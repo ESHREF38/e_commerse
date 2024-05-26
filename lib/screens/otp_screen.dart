@@ -1,4 +1,4 @@
-import 'package:e_commerse/screens/otp_verifiry_screen.dart';
+import 'package:e_commerse/screens/otp_verify_screen.dart';
 import 'package:flutter/material.dart';
 
 class OTPScreen extends StatelessWidget {
@@ -30,7 +30,7 @@ class OTPScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 60),
                 Text(
-                  "Please enter your Nu,ber.You will receive a OTP to create or set a new password via number.",
+                  "Please enter your Number.You will receive a OTP to create or set a new password via number.",
                   style: TextStyle(
                     fontSize: 15,
                   ),
