@@ -1,4 +1,4 @@
-import 'package:e_commerse/screens/login_screen.dart';
+import 'package:e_commerse/screens/navigation_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Ecommerce Sopping ",
       theme: ThemeData(
-        primaryColor: Color(0xFFEF6969),
+        primaryColor: Color(0xFFDB3022),
       ),
-      home: LoginScreen(),
+      home: NavigationScreen(),
     );
   }
 }
 
-// 18 :36
+// 1 11 36
