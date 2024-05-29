@@ -1,8 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   List<String> tabs = [
@@ -145,13 +143,14 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  height: 280,
+                  height: 180,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: imageList.length,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Container(
+                        width: 320,
                         margin: EdgeInsets.only(right: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -159,7 +158,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Container(
                               height: 180,
-                              width: 150,
+                              width: 180,
                               child: Stack(
                                 children: [
                                   InkWell(
@@ -169,8 +168,7 @@ class HomeScreen extends StatelessWidget {
                                       child: Image.asset(
                                         imageList[index],
                                         fit: BoxFit.cover,
-                                        height: 180,
-                                        width: 150,
+                                        width: 2000,
                                       ),
                                     ),
                                   ),
@@ -193,39 +191,56 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Column(
-                              children: [
-                                Text(
-                                  productTitles[index],
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Column(
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.amber,
-                                      size: 22,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    productTitles[index],
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    width: 120,
+                                    child: Text(
+                                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+                                      maxLines: 5,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
-                                    Text(
-                                      prices[index],
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(top: 15),
+                                    child: Row(
+                                      
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                          size: 22,
+                                        ),
+                                        Text(
+                                          prices[index],
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text('(' + reviews[index] + ')'),
+                                      ],
                                     ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text('(' + reviews[index] + ')'),
-                                  ],
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),
@@ -234,7 +249,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -247,20 +262,21 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                 ),
                 GridView.builder(
+                
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio: 0.6,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10, // Yeni eklendi
+                    mainAxisSpacing: 30,
+                    crossAxisSpacing: 10
+                    
                   ),
                   itemCount: productTitles.length,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return SizedBox(
-                      height: 300, // Yeni eklendi
+                      height: 200, // Yeni eklendi
                       child: Container(
-                        margin: EdgeInsets.only(right: 15),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -275,7 +291,7 @@ class HomeScreen extends StatelessWidget {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: Image.asset(
-                                          imageList[index],
+                                          imageList[index],fit: BoxFit.cover,width: 400,
                                         ),
                                       ),
                                     ),
