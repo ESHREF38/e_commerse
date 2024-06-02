@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:e_commerse/screens/product_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -162,7 +163,13 @@ class HomeScreen extends StatelessWidget {
                               child: Stack(
                                 children: [
                                   InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ProductScreen()));
+                                    },
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(15),
                                       child: Image.asset(
@@ -219,7 +226,6 @@ class HomeScreen extends StatelessWidget {
                                   Container(
                                     margin: EdgeInsets.only(top: 15),
                                     child: Row(
-                                      
                                       children: [
                                         Icon(
                                           Icons.star,
@@ -262,14 +268,11 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                 ),
                 GridView.builder(
-                
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.6,
-                    mainAxisSpacing: 30,
-                    crossAxisSpacing: 10
-                    
-                  ),
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.6,
+                      mainAxisSpacing: 30,
+                      crossAxisSpacing: 10),
                   itemCount: productTitles.length,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -278,8 +281,7 @@ class HomeScreen extends StatelessWidget {
                       height: 200, // Yeni eklendi
                       child: Container(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Expanded(
                               child: SizedBox(
@@ -287,11 +289,19 @@ class HomeScreen extends StatelessWidget {
                                 child: Stack(
                                   children: [
                                     InkWell(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ProductScreen()));
+                                      },
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(15),
                                         child: Image.asset(
-                                          imageList[index],fit: BoxFit.cover,width: 400,
+                                          imageList[index],
+                                          fit: BoxFit.cover,
+                                          width: 200,
                                         ),
                                       ),
                                     ),
@@ -317,23 +327,30 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 10),
-                            Text(
-                              productTitles[index],
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(Icons.star, color: Colors.amber, size: 22),
-                                Text(prices[index],
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold)),
-                                SizedBox(width: 10),
-                                Text('(' + reviews[index] + ')'),
+                                Text(
+                                  productTitles[index],
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(height: 10),
+                                Row(
+                                  children: [
+                                    Icon(Icons.star,
+                                        color: Colors.amber, size: 22),
+                                    Text(prices[index],
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold)),
+                                    SizedBox(width: 10),
+                                    Text('(' + reviews[index] + ')'),
+                                  ],
+                                ),
                               ],
-                            ),
+                            )
                           ],
                         ),
                       ),
