@@ -127,15 +127,9 @@ class ProductScreen extends StatelessWidget {
                       color: Color(0xFFDB3022),
                     ),
                   ),
+                  ProductDetailsPopUp(),
                 ],
               ),
-              SizedBox(
-                height: 10,
-              ),
-              ProductDetailsPopUp(),
-              SizedBox(
-                height: 30,
-              )
             ],
           ),
         ),
