@@ -95,8 +95,51 @@ class ProductDetailsPopUp extends StatelessWidget {
                               )
                           ],
                         ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(width: 10),
+                          Text("-", style: iStyle),
+                          SizedBox(width: 10),
+                          Text("1", style: iStyle),
+                          SizedBox(width: 10),
+                          Text("+", style: iStyle),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Total Payment0",
+                        style: iStyle,
+                      ),
+                      Text(
+                        "\$40.00",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFDB3022)),
                       )
                     ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: ContainerButtonModel(
+                      containerWidth: MediaQuery.of(context).size.width,
+                      itext: "Checkout",
+                      bgColor: Color(0xFFDB3022),
+                    ),
                   )
                 ],
               ),
