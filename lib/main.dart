@@ -1,4 +1,4 @@
-import 'package:e_commerse/screens/product_screen.dart';
+import 'package:e_commerse/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFDB3022),
       ),
-      home: ProductScreen(),
+      home:SplashScreen(),
     );
   }
 }
