@@ -1,6 +1,6 @@
+import 'package:e_commerse/screens/cart_screen.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProductDetailsPopUp extends StatelessWidget {
   final iStyle = TextStyle(
@@ -143,7 +143,13 @@ class ProductDetailsPopUp extends StatelessWidget {
                     height: 19,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CartScreen(),
+                          ));
+                    },
                     child: ContainerButtonModel(
                       containerWidth: MediaQuery.of(context).size.width,
                       itext: "Checkout",
