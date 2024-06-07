@@ -1,4 +1,5 @@
 import 'package:e_commerse/screens/home_screen.dart';
+import 'package:e_commerse/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -19,10 +20,7 @@ class Onboardingscreen extends StatelessWidget {
       globalBackgroundColor: Colors.white,
       pages: [
         PageViewModel(
-          
           title: "Shop Now",
-
-          
           body:
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           image: Image.asset(
@@ -60,7 +58,7 @@ class Onboardingscreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
                 child: Text(
