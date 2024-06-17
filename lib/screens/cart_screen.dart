@@ -2,6 +2,7 @@ import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CartScreen extends StatelessWidget {
   List imagelist = [
     'images/image1.jpg',

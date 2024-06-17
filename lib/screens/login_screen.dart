@@ -1,5 +1,4 @@
 import 'package:e_commerse/screens/forgot_screen.dart';
-import 'package:e_commerse/screens/home_screen.dart';
 import 'package:e_commerse/screens/navigation_screen.dart';
 import 'package:e_commerse/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';

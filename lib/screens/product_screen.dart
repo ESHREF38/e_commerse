@@ -3,6 +3,7 @@ import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+// ignore: must_be_immutable
 class ProductScreen extends StatelessWidget {
   List<String> images = [
     "images/image1.jpg",

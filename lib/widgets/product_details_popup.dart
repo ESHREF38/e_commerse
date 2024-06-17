@@ -2,6 +2,7 @@ import 'package:e_commerse/screens/cart_screen.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ProductDetailsPopUp extends StatelessWidget {
   final iStyle = TextStyle(
     color: Colors.black,
