@@ -1,3 +1,4 @@
+import 'package:e_commerse/screens/payment_method_screen.dart';
 import 'package:e_commerse/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFDB3022),
       ),
-      home:SplashScreen(),
+      home:PaymentMethodScreen(),
     );
   }
 }

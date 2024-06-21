@@ -1,3 +1,4 @@
+import 'package:e_commerse/screens/payment_method_screen.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,6 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool? index = false;
-    
 
     return Scaffold(
       appBar: AppBar(
@@ -143,9 +143,7 @@ class CartScreen extends StatelessWidget {
                     value: index,
                     splashRadius: 20,
                     activeColor: Color(0xFFDB3022),
-                    onChanged: ( index) {
-                      
-                    },
+                    onChanged: (index) {},
                   )
                 ],
               ),
@@ -177,7 +175,12 @@ class CartScreen extends StatelessWidget {
               SizedBox(height: 20),
               Container(
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PaymentMethodScreen()));
+                  },
                   child: ContainerButtonModel(
                     itext: "Checkout",
                     bgColor: Color(0xFFDB3022),
