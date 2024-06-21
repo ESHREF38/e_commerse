@@ -1,3 +1,4 @@
+import 'package:e_commerse/screens/shipping_address.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/material.dart';
 
@@ -321,7 +322,14 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                   height: 70,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ShippingAddress(),
+                      ),
+                    );
+                  },
                   child: ContainerButtonModel(
                     itext: "Confirm Payment",
                     containerWidth: size.width,
