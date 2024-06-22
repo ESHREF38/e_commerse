@@ -1,3 +1,4 @@
+import 'package:e_commerse/screens/order_confirm_screen.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/material.dart';
 
@@ -75,7 +76,12 @@ class ShippingAddress extends StatelessWidget {
                 height: 30,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OrderConfirmScreen()));
+                },
                 child: ContainerButtonModel(
                   itext: "Add Address",
                   containerWidth: MediaQuery.of(context).size.width,
