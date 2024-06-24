@@ -1,4 +1,4 @@
-import 'package:e_commerse/screens/order_confirm_screen.dart';
+import 'package:e_commerse/screens/order_success_screen.dart';
 import 'package:e_commerse/widgets/container_button_modal.dart';
 import 'package:flutter/material.dart';
 
@@ -80,7 +80,7 @@ class ShippingAddress extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => OrderConfirmScreen()));
+                          builder: (context) => OrderSuccessScreen()));
                 },
                 child: ContainerButtonModel(
                   itext: "Add Address",
